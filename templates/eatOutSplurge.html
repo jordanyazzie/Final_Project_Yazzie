@@ -1,10 +1,19 @@
 {% extends 'layout.html' %}
 {% block body %}
 
-<div class="text-center">
-  <h3>You Have Chosen to <span class="text-info">Eat Out</span></h3>
-  <h3>You Have Chosen to <span class="text-success">SPLURGE!</span></h3>
-  <h4>Here are my suggestions</h4>
+<div class="row">
+  <div class="col-lg-3"></div>
+  <div class="text-center col-lg-6">
+    <h3>You Have Chosen to <a href="/index"><span class="text-info">Eat Out</span></a></h3>
+    <h3>You Have Chosen to <a href="/EatOut"><span class="text-success">Splurge!</span></a></h3>
+    <h4>Here is my suggestion</h4>
+    <br>
+    <h1 class="border rounded pt-3 pb-3">Get your favorite guilty pleasure at <span class="text-danger">{{ suggestion }}</span></h1>
+    <br>
+    <h5>Sound good? Or maybe another suggestion?</h5>
+    <a href="/eatOutSplurge"><button class="btn btn-secondary">Try Again</button></a>
+  </div>
+  <div class="col-lg-3"></div>
 </div>
 
 {% endblock %}

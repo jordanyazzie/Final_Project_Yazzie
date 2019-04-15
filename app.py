@@ -1,6 +1,15 @@
 from flask import Flask, render_template, redirect, url_for, request
+import random
 
 app = Flask(__name__)
+
+eatout_healthy = ['Zupas', 'Chipotle', 'Panera Bread', 'Jamba Juice']
+eatout_splurge = ['KFC', 'Cheesecake Factory', 'Betos', 'Dominos', 'Wendys', 'Taco Bell', 'McDonalds', 'Olive Garden']
+home_healthy_main = ['Grilled Chicken', 'Steak', 'Salmon', ' Grilled Tofu', 'Chicken Noodle Soup', 'Veggie Burger', 'Fresh Mozzeralla']
+home_healthy_side = ['Steamed Broccoli', 'Sliced Apples', 'Kale Chips', 'Grilled Carrots', 'Sweet Potato Fries', 'Green Beans', 'Orange Slices']
+home_splurge_main = ['Ben and Jerrys', 'Fried Chicken', 'Mac N Cheese', 'Lasagna', 'Friend Pork Chops', 'Cheesy Potatoes', 'Cake']
+home_splurge_side = ['Cookie Dough', 'Doritos', 'Baked Beans', 'Buttery White Bread', 'Potato Salad', 'Macaroni Salad', 'Fried Rice', 'Hush Puppies']
+
 
 @app.route('/', methods=['GET', 'POST'])
 def login():
@@ -26,23 +35,25 @@ def stayhome():
 
 @app.route('/eatOutHealthy')
 def eohealthy():
-    return render_template('eatOutHealthy.html')
+    suggestion = random.choice(eatout_healthy)
+    return render_template('eatOutHealthy.html', suggestion=suggestion)
 
 @app.route('/eatOutSplurge')
 def eosplurge():
-    return render_template('eatOutSplurge.html')
+    suggestion = random.choice(eatout_splurge)
+    return render_template('eatOutSplurge.html', suggestion=suggestion)
 
 @app.route('/homeSplurge')
 def homesplurge():
-    return render_template('homeSplurge.html')
+    suggestionmain = random.choice(home_splurge_main)
+    suggestionside = random.choice(home_splurge_side)
+    return render_template('homeSplurge.html', suggestionmain=suggestionmain, suggestionside=suggestionside)
 
 @app.route('/homeHealthy')
 def homehealthy():
-    return render_template('homeHealthy.html')
-
-
-
-
+    suggestionmain = random.choice(home_healthy_main)
+    suggestionside = random.choice(home_healthy_side)
+    return render_template('homeHealthy.html', suggestionmain=suggestionmain, suggestionside=suggestionside)
 
 
 if __name__ == '__main__':
