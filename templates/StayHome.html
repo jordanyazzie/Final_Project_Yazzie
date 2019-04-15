@@ -1,6 +1,9 @@
 {% extends 'layout.html' %}
 {% block body %}
 <div class="text-center">
-  <h3>You Have Chosen to Cook at home</h3>
+  <h3>You Have Chosen to <span class="text-info">Cook at Home</span></h3>
+  <h4>Here is your next decision, would you like to</h4>
+  <a href="/homeHealthy"><button class="btn btn-success">Eat Healthy</button></a>
+  <a href="/homeSplurge"><button class="btn btn-success">SPLURGE!</button></a>
 </div>
 {% endblock %}

@@ -32,6 +32,14 @@ def eohealthy():
 def eosplurge():
     return render_template('eatOutSplurge.html')
 
+@app.route('/homeSplurge')
+def homesplurge():
+    return render_template('homeSplurge.html')
+
+@app.route('/homeHealthy')
+def homehealthy():
+    return render_template('homeHealthy.html')
+
 
 
 
