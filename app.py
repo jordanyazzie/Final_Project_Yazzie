@@ -3,12 +3,12 @@ import random
 
 app = Flask(__name__)
 
-eatout_healthy = ['Zupas', 'Chipotle', 'Panera Bread', 'Jamba Juice']
-eatout_splurge = ['KFC', 'Cheesecake Factory', 'Betos', 'Dominos', 'Wendys', 'Taco Bell', 'McDonalds', 'Olive Garden']
-home_healthy_main = ['Grilled Chicken', 'Steak', 'Salmon', ' Grilled Tofu', 'Chicken Noodle Soup', 'Veggie Burger', 'Fresh Mozzeralla']
-home_healthy_side = ['Steamed Broccoli', 'Sliced Apples', 'Kale Chips', 'Grilled Carrots', 'Sweet Potato Fries', 'Green Beans', 'Orange Slices']
-home_splurge_main = ['Ben and Jerrys', 'Fried Chicken', 'Mac N Cheese', 'Lasagna', 'Friend Pork Chops', 'Cheesy Potatoes', 'Cake']
-home_splurge_side = ['Cookie Dough', 'Doritos', 'Baked Beans', 'Buttery White Bread', 'Potato Salad', 'Macaroni Salad', 'Fried Rice', 'Hush Puppies']
+eatout_healthy = ['Zupas', 'Chipotle', 'Panera Bread', 'Jamba Juice', 'Great Harvest', 'Noodles and Company', 'Whole Foods Cafe', 'Protein Foundry']
+eatout_splurge = ['KFC', 'Cheesecake Factory', 'Betos', 'Dominos', 'Wendys', 'Taco Bell', 'McDonalds', 'Olive Garden', 'Crown Burger', 'Buffalo Wild Wings', 'Cafe Rio']
+home_healthy_main = ['Grilled Chicken', 'Steak', 'Salmon', ' Grilled Tofu', 'Chicken Noodle Soup', 'Veggie Burger', 'Fresh Mozzeralla', 'Turkey Burger', 'BLT']
+home_healthy_side = ['Steamed Broccoli', 'Sliced Apples', 'Kale Chips', 'Grilled Carrots', 'Sweet Potato Fries', 'Green Beans', 'Orange Slices', 'Grapes', 'Baked Chips']
+home_splurge_main = ['Ben and Jerrys', 'Fried Chicken', 'Mac N Cheese', 'Lasagna', 'Fried Pork Chops', 'Cheesy Potatoes', 'Cake', 'Cheese Burger', 'Chicken Fried Steak', 'Loaded Baked Potatoes']
+home_splurge_side = ['Cookie Dough', 'Doritos', 'Baked Beans', 'Buttery White Bread', 'Potato Salad', 'Macaroni Salad', 'Fried Rice', 'Hush Puppies', 'French Fries', 'Loaded Mashed Potatoes']
 
 
 @app.route('/', methods=['GET', 'POST'])
